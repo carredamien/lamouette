@@ -53,7 +53,7 @@
                 <!-- <a href="#" class="btn primary-btn" aria-label="Télécharger sur l'App Store">
                     <i class="icon-apple"></i> App Store
                 </a> -->
-                <a href="https://drive.google.com/file/d/1r6e8HPVYsot0rxNOpGhjPa3uZYG_BX3x/view?usp=sharing" onclick="trackAndRedirect(event, this.href)" class="btn secondary-btn" aria-label="Télécharger ">
+                <a href="https://drive.google.com/file/d/1r6e8HPVYsot0rxNOpGhjPa3uZYG_BX3x/view?usp=sharing"  class="btn secondary-btn" aria-label="Télécharger ">
                     <i class="icon-android"></i> Télécharger l'app
                 </a>
             </div>
@@ -83,25 +83,7 @@
     <footer>
         <p>&copy; 2025 La mouette. Tous droits réservés.</p>
     </footer>
-<script>
-function trackAndRedirect(event, url) {
-  // 1. On empêche le départ immédiat vers Drive
-  event.preventDefault();
 
-  // 2. On envoie l'événement à Google Analytics
-  gtag('event', 'download_drive', {
-    'file_name': 'la_mouette.apk',
-    'event_callback': function() {
-      // 3. Une fois que l'info est envoyée, on lance le téléchargement
-      window.location.href = url;
-    }
-  });
-
-  // Sécurité au cas où Analytics met trop de temps (0.5 seconde)
-  setTimeout(function() {
-    window.location.href = url;
-  }, 500);
-}
 </script>
 </body>
 </html>
