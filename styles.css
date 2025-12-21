@@ -281,8 +281,7 @@ footer {
 }
 
 .slide-image img {
-    width: auto;
-    height: 80%;
+    width: 100%;
 }
 
 .slide-content {
