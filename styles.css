@@ -282,7 +282,8 @@ footer {
 
 .slide-image img {
     width: 100%;
-    max-height: 22rem
+    min-height: 22rem;
+    max-height:26rem;
 }
 
 .slide-content {
