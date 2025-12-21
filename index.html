@@ -21,7 +21,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <favicon href="logo.png" type="image/x-icon">
+    <favicon href="img/logo.png" type="image/x-icon">
     <meta name="description" content="Application météo pour tous, mais surtout les amoureux de la mer 😉">
     <title>La mouette</title>
     <link rel="stylesheet" href="styles.css">
@@ -30,22 +30,85 @@
 <body>
     <header class="hero">
         <div class="container">
-            <img src="logo.webp" alt="Logo de l'application météo - Un oiseau sur un nuage" class="app-logo">
+            <img src="img/logo.webp" alt="Logo de l'application météo - Un oiseau sur un nuage" class="app-logo">
             <h1>La mouette</h1>
             <p class="tagline">Application météo pour tous, mais surtout les amoureux de la mer 😉</p>
         </div>
     </header>
-
     <main class="container">
-
-            <section class="partners-section">
+        <section class="partners-section">
             <h2>Devenez Partenaire de La Mouette</h2>
             <p>Être partenaire de La Mouette, c'est être au bon moment, au bon endroit, proche de vos clients, mais pas trop. </p>
-                <p>Alors ne perdez pas de temps et rejoignez-nous 🤙</p>
+            <p>C'est aussi se lié à une application qui privilégie les acteurs locaux afin de promouvoir nos passions. </p>
+            <p>Alors ne perdez pas de temps et rejoignez-nous 🤙</p>
             <div class="partners-links">
                 <a href="mailto:meteomouette@gmail.com" class="btn primary-btn">Nous contacter</a>
             </div>
         </section>
+
+        <section class="carousel-section">
+            <h2>Ce que sait faire la mouette...</h2>
+            <div class="carousel-container">
+                <!-- Les slides -->
+                <div class="carousel-slide active">
+                    <div class="slide-image">
+                        <img src="/img/accueil.webp" alt="Vue de l'interface principale">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Interface Claire et Intuitive</h3>
+                        <p>Consultez la météo en un clin d'œil grâce à un design épuré et des informations faciles à lire.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-slide slide-reversed">
+                    <div class="slide-image">
+                        <img src="/img/wing.jpg" alt="Prévisions sur 12 jours">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Prévisions sur 12 Jours</h3>
+                        <p>Consultez les prévisions météo sur les 12 prochains jours pour planifier vos activités 😉.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image">
+                        <img src="/img/maps.png" alt="Spots favoris">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Vos Spots Favoris</h3>
+                        <p>Enregistrez vos lieux préférés pour accéder instantanément aux conditions météo locales.
+                            Historique des prévisions, prévisions à venir avec météo marine pour vos spots
+                            Des prévisions fiables que vous pouvez régler selon un indice de confiance pour chaque modèle météo</p>
+                    </div>
+                </div>
+
+                <div class="carousel-slide slide">
+                    <div class="slide-image">
+                        <img src="/img/actu.jpg" alt="Actualités">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Toutes vos actus</h3>
+                        <p>Retrouver vos revendeurs, votre actualité et vos site préférés directement à partir de l'application</p>
+                    </div>
+                </div>
+                <div class="carousel-slide slide-reversed">
+                    <div class="slide-image">
+                        <img src="/img/session.webp" alt="Checklists personnalisées">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Checklists Personnalisées</h3>
+                        <p>N'oublier avant une session ? Préparez et sauvegardez vos listes d'équipement directement dans l'app.
+                            Sauvegardez aussi vos sessions 🤙</p>
+                    </div>
+                </div>
+
+                <!-- Boutons de navigation -->
+                <div class="carousel-navigation">
+                    <button id="prevBtn" class="nav-btn">&larr;</button>
+                    <button id="nextBtn" class="nav-btn">&rarr;</button>
+                </div>
+            </div>
+        </section>
+
         <section class="download-section">
             <h2>Téléchargez notre application maintenant !</h2>
 
@@ -61,22 +124,29 @@
             <p class="small-text">Compatible Android uniquement (version IOS à venir).</p>
         </section>
 
-    
-
         <section class="features">
-            <h3>Pourquoi choisir La mouette?</h3>
+            <h3>Pour résumer, La mouette, c'est:</h3>
             <ul>
-             <li>Météo quotidienne + chatbot IA via Gemini.</li>
+             <li>Météo quotidienne + chatbot <span class="bold">IA</span> via Gemini.</li>
                 <li>Interface cool et intuitive.</li>
-                <li>Prévisions sur 12 jours.</li>
-                <li>Affichage de vos spots favoris.</li>
-                <li>Ajoutez vos conditions préférées et l'appli vous indique quelle activité faire</li>
-                <li>Enrichie de différents modèles météorologiques configurables selon vos préférences.</li>
-                <li>Préparez vos checklists pour ne jamais rien oublier </li>
-                <li>Sauvegarder vos sessions</li>
-                <li>Suivez votre actualité préférée à partir de l'application</li>
-                <li>Gratuite et fiable</li>
+                <li>Prévisions sur <span class="bold">12 jours</span>.</li>
+                <li>Affichage de vos spots <span class="bold">favoris</span>.</li>
+                <li>Ajoutez vos conditions préférées et l'appli vous indique quelle <span class="bold">activité</span> choisir</li>
+                <li>Enrichie de <span class="bold">différents modèles météorologiques</span> configurables selon vos préférences.</li>
+                <li>Préparez vos <span class="bold">checklists</span> pour ne rien oublier avant une session</li>
+                <li><span class="bold">Sauvegarder</span> vos sessions</li>
+                <li>Suivez votre <span class="bold">actualité</span> préférée à partir de l'application</li>
+                <li><span class="bold">Gratuite & fiable</span></li>
             </ul>
+        </section>
+
+        <section class="thank-you-section">
+            <div class="thank-you-icon">
+                <img src="img/mouette.webp" alt="Icône de mouette">
+            </div>
+            <p>Nous tenons à remercier chaleureusement tous nos partenaires pour leur soutien et leur confiance.</p>
+            <p>Votre collaboration est essentielle pour l'aventure de La Mouette. </p>
+            </p>Merci pour votre temps !</p>
         </section>
     </main>
 
@@ -85,6 +155,7 @@
     </footer>
 
 </script>
+<script src="carousel.js"></script>
 </body>
 </html>
 

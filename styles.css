@@ -72,7 +72,11 @@ body {
     /* Ombre subtile pour donner de la légèreté sur l'arrière-plan ciel */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
     border: 1px solid rgba(0, 77, 153, 0.1); /* Cadre léger */
+    width: 100%;
 }
+
+
+
 
 .download-section h2, .partners-section h2 {
     font-family: 'Oswald', sans-serif;
@@ -104,6 +108,9 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.bold{
+    font-weight: bold;
+}
 .primary-btn {
     background-color: var(--primary-color);
 }
@@ -189,6 +196,169 @@ footer {
     background-color: var(--secondary-color); /* Bande aqua en bas */
     color: var(--white);
 }
+
+/* --- Section Remerciement --- */
+.thank-you-section {
+    position: relative; /* Nécessaire pour le positionnement absolu de l'icône */
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 30px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: var(--dark-blue);
+}
+
+.thank-you-icon {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.thank-you-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.thank-you-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* --- Section Carrousel (Mise à jour) --- */
+.carousel-section {
+    padding: 40px 20px;
+    margin-top: 30px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 77, 153, 0.1);
+    text-align: center;
+}
+
+.carousel-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.carousel-container {
+    position: relative; /* Contexte pour le positionnement des boutons */
+}
+
+.carousel-slide {
+    display: none; /* On cache toutes les slides par défaut */
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.carousel-slide.active {
+    display: flex; /* On affiche uniquement la slide active */
+}
+
+.carousel-slide.slide-reversed {
+    flex-direction: row-reverse;
+}
+
+.slide-image {
+    flex: 1 1 45%;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.slide-image img {
+    width: 100%;
+}
+
+.slide-content {
+    flex: 1 1 55%;
+}
+
+.slide-content h3 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+/* --- Navigation du Carrousel --- */
+.carousel-navigation {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Pour ne pas gêner les clics sur le contenu */
+}
+
+.nav-btn {
+    pointer-events: auto; /* Réactive les clics sur les boutons */
+    background-color: rgba(37, 103, 150, 0.8);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px; /* Marge pour ne pas coller aux bords */
+}
+
+.nav-btn:hover {
+    background-color: var(--dark-blue);
+}
+
+/* --- Media Queries (Mise à jour) --- */
+@media (max-width: 768px) {
+    .carousel-slide, .carousel-slide.slide-reversed {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .carousel-slide.active {
+        /* S'assure que l'affichage est correct sur mobile */
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .slide-content {
+        width: 100%;
+    }
+
+    .slide-content h3 {
+        font-size: 1.5em;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+
+    .carousel-navigation {
+        /* On remonte un peu les boutons sur mobile pour ne pas être sur l'image */
+        top: 40%;
+    }
+}
+
 
 /* --- Media Queries pour la Responsivité --- */
 @media (max-width: 600px) {
